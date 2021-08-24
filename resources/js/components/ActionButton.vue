@@ -1,6 +1,8 @@
 <template>
-  <div class="row justify-content-center container-bg">
-    <button type="button" class="btn btn-primary">Generate</button>
+  <div class="row justify-content-center">
+    <button type="button" v-on:click="generate" class="btn btn-primary">
+      Generate
+    </button>
     <button type="button" class="btn btn-success">Add New Image</button>
   </div>
 </template>
@@ -36,19 +38,6 @@ export default {
   methods: {
     generate() {
       console.log("generate");
-
-      // this.axios.get(`${constants.API_URL}/images`).then((res) => {
-      //     this.images = res.data;
-      //     });
-
-      //   this.axios
-      //     .patch(
-      //       `http://localhost:8000/api/products/${this.$route.params.id}`,
-      //       this.product
-      //     )
-      //     .then((res) => {
-      //       this.$router.push({ name: "home" });
-      //     });
     },
   },
 };

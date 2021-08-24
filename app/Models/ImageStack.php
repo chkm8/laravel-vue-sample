@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class ImageStack extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'index',
+        'name',
+        'path',
+    ];
 }

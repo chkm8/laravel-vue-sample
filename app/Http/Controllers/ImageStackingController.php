@@ -17,6 +17,22 @@ class ImageStackingController extends Controller
         return response()->json($new_data);
     }
 
+    public function post(Request $request, ImageStack $image_stack)
+    {
+        $file_name = time() . '_' . $request->imageAttachment->getClientOriginalName();
+        $file_path = $request->file('imageAttachment')->storeAs('images', $file_name, 'public');
+
+        $image = $image_stack->create(
+            [
+                'index' => $request->index,
+                'name' => $file_name,
+                'path' => $file_path,
+            ]
+        );
+
+        return response()->json($image);
+    }
+
     private function recursive(Collection $data, array &$new_data, int &$counter = 0): array
     {
         if ($counter < $data->count()) {

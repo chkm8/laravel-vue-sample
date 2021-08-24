@@ -1,39 +1,19 @@
 <template>
-  <div class="container bg">
-    <!-- <div v-for="img in images">
-      <div class="stacking">
-        <img class="img" :src="img.path" />
-      </div>
-    </div> -->
-
+  <div class="container-variation">
     <div class="stack stack-spread">
       <template v-for="(item, index) in images">
         <img :src="item.path" :alt="index" :key="index" />
       </template>
     </div>
-
-    <div class="stack stack-spread">
-      <!-- {{ stackImages }} -->
-      <!-- <template v-for="(item, index) in images">
-        <img :src="item.path" :alt="index" :key="index" />
-      </template> -->
-    </div>
-
-    <!-- <div class="stack stack-sidegrid">
-      <img src="/storage/images/1-a.png" alt="img-01" />
-      <img src="/storage/images/1-b.png" alt="img-03" />
-      <img src="/storage/images/2-a.png" alt="img-04" />
-      <img src="/storage/images/2-b.png" alt="img-02" />
-    </div> -->
   </div>
 </template>
 
 <style>
-.bg {
+.container-variation {
   background-color: aqua;
   height: 250px;
   width: 250px;
-  /* float: right; */
+  float: left;
   /* position: relative; */
   margin: 10px;
 }
@@ -42,12 +22,6 @@
   height: 150px;
   width: 150px;
 }
-
-/* .stacking {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  position: relative;
-} */
 
 .stack {
   margin: 20px auto;
@@ -72,7 +46,7 @@
 }
 
 .stack-spread img:nth-child(3) {
-  -webkit-transform: translate(-15px, 15px);
+  -webkit-transform: translate(15px, 15px);
   transform: translate(-15px, 15px);
 }
 
@@ -91,16 +65,7 @@ export default {
   },
   computed: {
     // a computed getter
-    stackImages: function () {
-      // `this` points to the vm instance
-      //   return this.message.split("").reverse().join("");
-      //   return [
-      //     <img src="/storage/images/1-a.png" alt="img-01" />,
-      //     <img src="/storage/images/1-b.png" alt="img-03" />,
-      //     <img src="/storage/images/2-a.png" alt="img-04" />,
-      //     <img src="/storage/images/2-b.png" alt="img-02" />,
-      //   ];
-    },
+    stackImages: function () {},
   },
 };
 </script>
