@@ -7,6 +7,21 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+
+## About the Project
+This started as an exam for a job that I applied for and also decided to be a personal project where in I can try/test laravel + vue. I planned to expand the feature by adding admin side, I don't know yet if I'm going to build this as Product or application, I havn't one in mind yet, or it will be a repository of code base and implementation of new technology. Let's see how it goes.
+
+To run the project, you should know basic laravel and vue setup, if not check their documentation https://laravel.com.
+
+## TO DO:
+Backend Side
+    - add authentication to the api routes
+    - Update/Fix the Seeder for ImageStackSeeder 
+
+Front End
+    - add login page
+    - add dashboard/navigation page
+    - refactor the components    
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
