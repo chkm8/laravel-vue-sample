@@ -60,20 +60,18 @@
 <script>
 import ActionButton from "./ActionButton.vue";
 import Variation from "./Variation.vue";
-import * as constants from "../constants.js";
 
 export default {
   components: { Variation, ActionButton },
   mounted() {
     console.log("Component mounted.");
-    console.log(constants.API_URL);
   },
   data() {
     return {
       images: {},
       imageAttachment: null,
       selected_index: null,
-      options: [0, 1, 2, 3, 4],
+      options: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     };
   },
   created() {
@@ -97,9 +95,6 @@ export default {
       this.handleSubmit();
     },
     handleSubmit() {
-      console.log("handleSubmit " + this.selected_index);
-      console.log("handleSubmit " + this.imageAttachment);
-
       const config = {
         headers: {
           "content-type": "multipart/form-data",

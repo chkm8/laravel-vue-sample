@@ -1,17 +1,5 @@
 <template>
   <div class="container-variation">
-    <!-- <div class="stack stack-spread">
-      <template v-for="(item, index) in images">
-        <b-img
-          thumbnail
-          fluid
-          :src="item.path"
-          :alt="'img' + index"
-          :key="index"
-        ></b-img>
-      </template>
-    </div> -->
-
     <div class="stack stack-spread">
       <template v-for="(item, index) in images">
         <b-img
@@ -20,6 +8,11 @@
           :src="item.path"
           :alt="'img' + index"
           :key="index"
+          :style="{
+            '-webkit-transform':
+              'translate(' + index * 10 + 'px, ' + index * 10 + 'px)',
+            transform: 'translate(' + index * 10 + 'px, ' + index * 10 + 'px)',
+          }"
         ></b-img>
       </template>
     </div>
@@ -60,23 +53,9 @@
   transition: all 0.3s;
 }
 
-.stack img:last-child {
-  position: relative;
-}
-
-.stack-spread img:nth-child(even) {
-  -webkit-transform: translate(25px, 5px);
-  transform: translate(25px, 5px);
-}
-
-.stack-spread img:nth-child(odd) {
+.test-stack {
   -webkit-transform: translate(35px, 20px);
   transform: translate(35px, 20px);
-}
-
-.stack-spread img:first-child {
-  -webkit-transform: translate(15px, -10px);
-  transform: translate(15px, -10px);
 }
 </style>
 <script>
@@ -86,10 +65,6 @@ export default {
   },
   mounted() {
     console.log("Variations Component mounted.");
-  },
-  computed: {
-    // a computed getter
-    stackImages: function () {},
   },
 };
 </script>

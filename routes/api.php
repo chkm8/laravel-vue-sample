@@ -19,8 +19,5 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-// Route::get('/images', 'App\Http\Controllers\ImageStackingController@index');
-// Route::post('/images', 'App\Http\Controllers\ImageStackingController@post');
-
 Route::get('/images', [ImageStackingController::class, 'index'])->name('image_index');
 Route::post('/images', [ImageStackingController::class, 'post'])->name('image_post');

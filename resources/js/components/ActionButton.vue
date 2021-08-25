@@ -23,7 +23,6 @@ import * as constants from "../constants.js";
 export default {
   mounted() {
     console.log("Component mounted.");
-    console.log(constants.API_URL);
   },
   data() {
     return {
