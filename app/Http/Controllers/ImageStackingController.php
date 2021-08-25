@@ -44,6 +44,10 @@ class ImageStackingController extends Controller
         return response()->json($image);
     }
 
+    /**
+     * For the sake of this test, we will be using a recursive function instead of using
+     * Collection to easily map the data ;)
+     */
     private function recursive(Collection $data, array &$new_data, int &$counter = 0): array
     {
         if ($counter < $data->count()) {
